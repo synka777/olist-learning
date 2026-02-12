@@ -57,7 +57,7 @@ def benchmark_query(sql: str) -> str:
         con.row_factory = sqlite3.Row      # (optionnel) pour accéder aux colonnes par nom
         cur = con.cursor()
         cur.execute(sql)
-        rows = cur.fetchall()              # force le fetch complet
+        rows = cur.fetchall()           # force le fetch complet
 
     elapsed = time.perf_counter() - start
-    return f"Fetched {len(rows)} rows in {elapsed:.3f}s"
+    return rows[:20], f"Fetched {len(rows)} rows in {elapsed:.3f}s"
