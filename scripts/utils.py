@@ -1,6 +1,8 @@
+import sqlite3, time
 import pandas as pd
 import unicodedata
 import re
+
 
 def clean_data(df:pd.DataFrame) -> pd.DataFrame:
     # Trim les douuble quotes en début et fin de colonnes
@@ -43,3 +45,19 @@ def norm(name: str) -> str:
     name = re.sub(r"\s+", " ", name)
 
     return name
+
+
+
+def benchmark_query(sql: str) -> str:
+    """Exécute la requête SQL, mesure le temps et renvoie le résultat."""
+    start = time.perf_counter()
+
+    # 👉  Connexion et curseur créés ici, donc même thread
+    with sqlite3.connect('./olist.db', check_same_thread=False) as con:
+        con.row_factory = sqlite3.Row      # (optionnel) pour accéder aux colonnes par nom
+        cur = con.cursor()
+        cur.execute(sql)
+        rows = cur.fetchall()              # force le fetch complet
+
+    elapsed = time.perf_counter() - start
+    return f"Fetched {len(rows)} rows in {elapsed:.3f}s"
