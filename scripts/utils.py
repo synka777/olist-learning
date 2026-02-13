@@ -1,10 +1,10 @@
-import json
 from typing import Dict, Any
+from pathlib import Path
 import sqlite3, time
 import pandas as pd
 import unicodedata
+import json
 import re
-
 
 ####################
 # Utility functions
@@ -65,7 +65,7 @@ def get_perf_stats(sql: str) -> str:
         rows = cur.fetchall()           # force le fetch complet
 
     elapsed = time.perf_counter() - start
-    return rows[:20], len(rows), elapsed
+    return rows[:12], len(rows), elapsed
 
 
 
