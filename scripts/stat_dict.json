@@ -1,0 +1,115 @@
+{
+	"sales": {
+		"daily": {
+			"raw": {
+				"rows": 0,
+				"time": 0
+			},
+			"optimized": {}
+		},
+		"monthly": {
+			"raw": {
+				"rows": 0,
+				"time": 0
+			},
+			"optimized": {
+				"rows": 0,
+				"time": 0
+			}
+		},
+		"yearly": {
+			"raw": {
+				"rows": 0,
+				"time": 0
+			},
+			"optimized": {
+				"rows": 0,
+				"time": 0
+			}
+		},
+		"previous_year_comparison": {
+			"raw": {
+				"rows": 0,
+				"time": 0
+			},
+			"optimized": {
+				"rows": 0,
+				"time": 0
+			}
+		},
+		"top10": {
+			"raw": {
+				"rows": 0,
+				"time": 0
+			},
+			"optimized": {
+				"rows": 0,
+				"time": 0
+			}
+		}
+	},
+	"customers": {
+		"new_vs_recurring_customers": {
+			"raw": {
+				"rows": 0,
+				"time": 0
+			},
+			"optimized": {
+				"rows": 0,
+				"time": 0
+			}
+		},
+		"average_cart": {
+			"raw": {
+				"rows": 0,
+				"time": 0
+			},
+			"optimized": {
+				"rows": 0,
+				"time": 0
+			}
+		},
+		"conversion_rate": {
+			"raw": {
+				"rows": 0,
+				"time": 0
+			},
+			"optimized": {
+				"rows": 0,
+				"time": 0
+			}
+		},
+		"rfmbbq_analysis": {
+			"raw": {
+				"rows": 0,
+				"time": 0
+			},
+			"optimized": {
+				"rows": 0,
+				"time": 0
+			}
+		}
+	},
+	"cohorts": {
+		"first_month_retention": {
+			"raw": {
+				"rows": 0,
+				"time": 0
+			},
+			"optimized": {
+				"rows": 0,
+				"time": 0
+			}
+		},
+		"lifetime_value_per_cohort": {
+			"raw": {
+				"rows": 0,
+				"time": 0
+			},
+			"optimized": {
+				"rows": 0,
+				"time": 0
+			}
+		}
+	}
+}
